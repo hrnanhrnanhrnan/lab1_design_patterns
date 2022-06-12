@@ -1,0 +1,16 @@
+C:\Users\hrnan\source\repos\lab1_designpatterns\lab1_designpatterns\obj\Debug\net5.0\lab1_designpatterns.csproj.AssemblyReference.cache
+C:\Users\hrnan\source\repos\lab1_designpatterns\lab1_designpatterns\obj\Debug\net5.0\lab1_designpatterns.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hrnan\source\repos\lab1_designpatterns\lab1_designpatterns\obj\Debug\net5.0\lab1_designpatterns.AssemblyInfoInputs.cache
+C:\Users\hrnan\source\repos\lab1_designpatterns\lab1_designpatterns\obj\Debug\net5.0\lab1_designpatterns.AssemblyInfo.cs
+C:\Users\hrnan\source\repos\lab1_designpatterns\lab1_designpatterns\obj\Debug\net5.0\lab1_designpatterns.csproj.CoreCompileInputs.cache
+C:\Users\hrnan\source\repos\lab1_designpatterns\lab1_designpatterns\bin\Debug\net5.0\lab1_designpatterns.exe
+C:\Users\hrnan\source\repos\lab1_designpatterns\lab1_designpatterns\bin\Debug\net5.0\lab1_designpatterns.deps.json
+C:\Users\hrnan\source\repos\lab1_designpatterns\lab1_designpatterns\bin\Debug\net5.0\lab1_designpatterns.runtimeconfig.json
+C:\Users\hrnan\source\repos\lab1_designpatterns\lab1_designpatterns\bin\Debug\net5.0\lab1_designpatterns.runtimeconfig.dev.json
+C:\Users\hrnan\source\repos\lab1_designpatterns\lab1_designpatterns\bin\Debug\net5.0\lab1_designpatterns.dll
+C:\Users\hrnan\source\repos\lab1_designpatterns\lab1_designpatterns\bin\Debug\net5.0\ref\lab1_designpatterns.dll
+C:\Users\hrnan\source\repos\lab1_designpatterns\lab1_designpatterns\bin\Debug\net5.0\lab1_designpatterns.pdb
+C:\Users\hrnan\source\repos\lab1_designpatterns\lab1_designpatterns\obj\Debug\net5.0\lab1_designpatterns.dll
+C:\Users\hrnan\source\repos\lab1_designpatterns\lab1_designpatterns\obj\Debug\net5.0\ref\lab1_designpatterns.dll
+C:\Users\hrnan\source\repos\lab1_designpatterns\lab1_designpatterns\obj\Debug\net5.0\lab1_designpatterns.pdb
+C:\Users\hrnan\source\repos\lab1_designpatterns\lab1_designpatterns\obj\Debug\net5.0\lab1_designpatterns.genruntimeconfig.cache
