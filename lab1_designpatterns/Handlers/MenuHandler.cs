@@ -1,21 +1,15 @@
 ﻿using lab1_designpatterns.Abstractions;
-using lab1_designpatterns.Strategies;
 using lab1_designpatterns.StrategyContexts;
-using lab1_designpatterns.Utilities;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace lab1_designpatterns.Handlers
 {
     public class MenuHandler
     {
         private readonly RateTypeContext _rateTypeContext;
-        private readonly LoanHandler _loanHandler;
-        private readonly RateHandler _rateHandler;
-        public MenuHandler(RateTypeContext rateTypeContext, LoanHandler loanHandler, RateHandler rateHandler)
+        private readonly IHandler<ILoanType> _loanHandler;
+        private readonly IHandler<IRateType> _rateHandler;
+        public MenuHandler(RateTypeContext rateTypeContext, IHandler<ILoanType> loanHandler, IHandler<IRateType> rateHandler)
         {
             _rateTypeContext = rateTypeContext;
             _loanHandler = loanHandler;
@@ -27,20 +21,23 @@ namespace lab1_designpatterns.Handlers
 
             AlertOfEnterToContinue();
 
-            //get loantype
-            ILoanType loanType = _loanHandler.GetChosenLoanType();
+            //get object of the product interface type ILoanType
+            //through the getselectedtype method through the injected loandhandler instance
+            ILoanType loanType = _loanHandler.GetSelectedType();
 
             AlertOfEnterToContinue();
 
-            //get ratetype
-            IRateType ratetype = _rateHandler.GetChosenRateType();
+            //get object of the abstract strategy type IRateType
+            //through the getselectedtype method through the injected ratehandler instance
+            IRateType ratetype = _rateHandler.GetSelectedType();
 
             AlertOfEnterToContinue();
 
-            //set ratetype context
+            //through the injected instance of the strategy context class RateTypeContext SetRateType method
+            //sets the RateType strategy that is selected by the user
             _rateTypeContext.SetRateType(ratetype);
 
-            //info about loan
+            //writes the loan and rate types to the console
             Console.WriteLine($"Congratulations! You have a approved loan!");
             Console.WriteLine("--------------------------------------------");
             Console.WriteLine($"Type of loan: {loanType.GetLoanType()}, base rate: {loanType.GetBaseRate()} and monthly charge: {loanType.GetMonthlyCharge()}");
@@ -54,7 +51,7 @@ namespace lab1_designpatterns.Handlers
 
         private void AlertOfEnterToContinue()
         {
-            Console.WriteLine("Please press enter to continue");
+            Console.WriteLine("Please press enter to continue!");
             Console.ReadLine();
             Console.Clear();
         }

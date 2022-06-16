@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace lab1_designpatterns
 {
+    //Concrete product which implements the product interface
     public class HouseLoanType : ILoanType
     {
         public decimal GetBaseRate() => 2.09M;

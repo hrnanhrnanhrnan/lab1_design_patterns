@@ -1,12 +1,8 @@
 ﻿using lab1_designpatterns.Abstractions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace lab1_designpatterns.Strategies
 {
+    //Concrete strategy that implements the abstract strategy interface IRateType
     public class FixedRateType : IRateType
     {
         public string GetRateTypeName() => "Fixed rate";

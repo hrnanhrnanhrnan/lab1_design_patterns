@@ -1,7 +1,9 @@
 ﻿namespace lab1_designpatterns.Abstractions
 {
+    //abstraction for utilitymethods
     public interface IUtilityMethods
     {
-        int GetValidChoice(string header, string[] choices);
+        static IUtilityMethods GetInstance { get; }
+        int GetValidMenuChoice(string header, string[] choices);
     }
 }

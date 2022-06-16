@@ -1,15 +1,39 @@
 ﻿using lab1_designpatterns.Abstractions;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace lab1_designpatterns.Utilities
 {
+    //Thread-safe Singleton class using locks that implements the IUtilitymethods interface
     public class UtilityMethods : IUtilityMethods
     {
-        public int GetValidChoice(string header, string[] choices)
+        private static readonly object InstanceLock = new();
+        private static UtilityMethods instance = null;
+        private UtilityMethods()
+        {
+        }
+
+        public static UtilityMethods GetInstance
+        {
+            get
+            {
+                //the lock makes sure that the get method is synchronized,
+                //so that only one thread can access it at any given point of time
+                lock (InstanceLock)
+                {
+                    if (instance == null)
+                    {
+                        instance = new UtilityMethods();
+                    }
+                    return instance;
+                }
+            }
+        }
+
+        //implements the interface method which takes two parameters, one string named header and a array of strings named choices
+        //header will be written to the console as a menu header, and choices is the type of choices that the user can choose from
+        //the method then makes sure that the choice is valid,
+        //by checking that the input from the user is a number and that it's within the available choices to choose from
+        public int GetValidMenuChoice(string header, string[] choices)
         {
             bool validChoice = false;
             int numToReturn = 0;
