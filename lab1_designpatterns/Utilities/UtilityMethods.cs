@@ -4,7 +4,7 @@ using System;
 namespace lab1_designpatterns.Utilities
 {
     //Thread-safe Singleton class using locks that implements the IUtilitymethods interface
-    public class UtilityMethods : IUtilityMethods
+    public sealed class UtilityMethods : IUtilityMethods
     {
         private static readonly object InstanceLock = new();
         private static UtilityMethods instance = null;

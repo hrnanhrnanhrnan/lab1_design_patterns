@@ -41,7 +41,7 @@ namespace lab1_designpatterns.Handlers
             Console.WriteLine($"Congratulations! You have a approved loan!");
             Console.WriteLine("--------------------------------------------");
             Console.WriteLine($"Type of loan: {loanType.GetLoanType()}, base rate: {loanType.GetBaseRate()} and monthly charge: {loanType.GetMonthlyCharge()}");
-            Console.WriteLine($"You choose : {_rateTypeContext.GetName()}, and the rate is then adjusted with: {_rateTypeContext.GetRate()}");
+            Console.WriteLine($"You selected {_rateTypeContext.GetName()}, and the rate is then adjusted with: {_rateTypeContext.GetRate()}");
             Console.WriteLine($"Your adjusted interest rate is then: {loanType.GetBaseRate() + _rateTypeContext.GetRate()}");
             Console.WriteLine("--------------------------------------------");
 
